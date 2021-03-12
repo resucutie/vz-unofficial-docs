@@ -52,3 +52,14 @@ await time.sleep(2000) // more like C way
 console.log("bruh") // logs "bruh" after 2000ms (2 seconds)
 ```
 
+
+
+## Deprecated/Non-functional functions
+
+For now, there isn't any deprecated functions
+
+
+
+## Removed functions
+
+For now, there isn't any function that got removed

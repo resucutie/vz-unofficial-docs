@@ -1,4 +1,4 @@
-# Time
+# Number
 
 Utilities for number manipulation
 
@@ -77,3 +77,15 @@ Checks if the input is an number. It returns `true` if input is a number and ret
 number.isNumber("h") // false
 number.isNumber(6) // true
 ```
+
+
+
+## Deprecated/Non-functional functions
+
+For now, there isn't any deprecated functions
+
+
+
+## Removed functions
+
+For now, there isn't any function that got removed
