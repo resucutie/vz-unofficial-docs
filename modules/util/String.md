@@ -18,8 +18,6 @@ const { string } = require("@vizality/util")
 
 Check if input is a string. If not, outputs an error, otherwise do nothing
 
-Example:
-
 ```js
 string.assertString(true) // Uncaught TypeError: Expected a string but received boolean.
 string.assertString("nope") // undefined
@@ -28,8 +26,6 @@ string.assertString("nope") // undefined
 #### `chunkText(text, numberOfCharacters)`
 
 Divides text by sections of `numberOfCharacters`. Returns an array
-
-Example:
 
 ```js
 string.chunkText("stuff", 2) // ["st", "uf", "f"]
@@ -41,8 +37,6 @@ string.chunkText("stuff", 3) // ["stu", "ff"]
 
 Gets an alphabetical/numeric random character. Returns an string
 
-Example:
-
 ```js
 string.getRandomString(8) // "GI68TEpl"
 string.getRandomString(20) // "XdXpqtiJAlG8mpV0HnHa"
@@ -53,8 +47,6 @@ string.getRandomString(5) // "iIzQ7"
 
 Checks if string is in the plural form
 
-Example:
-
 ```js
 string.isPlural("chair") // false
 string.isPlural("chairs") // true
@@ -64,8 +56,6 @@ string.isPlural("chairs") // true
 
 Checks if string is in the singular form
 
-Example:
-
 ```js
 string.isSingular("chair") // true
 string.isSingular("chairs") // false
@@ -74,8 +64,6 @@ string.isSingular("chairs") // false
 #### `isString(input)`
 
 Checks if the input is an string. Returns `true` if input is a string and returns `false` if not
-
-Examples:
 
 ````js
 string.isString("message logger go brrrr") // true
@@ -88,8 +76,6 @@ string.isString({no: "pe"}) // false
 
 Checks if text is a URL. Returns `true` if yes and `false` if no
 
-Examples:
-
 ```js
 string.isUrl("binguscord") // false
 string.isUrl("https://imagine-having.homo.services/1f4AAFA.png") // true
@@ -99,8 +85,6 @@ string.isUrl("imagine-having.homo.services/1f4AAFA.png") // false. Note that it 
 #### `owoifyText(text)`
 
 \*waises paw* Makes the text cute owo. Wetuwns a-an stwing uwu. And nyow i wannya hug somebody womebody >w<
-
-E-Exampwes:
 
 ```js
 string.owoifyText("Pillows") // Piwwows
@@ -112,8 +96,6 @@ string.owoifyText("Vizality is the best client") // "Vizawity Wizawity is the be
 
 Removes all diacritics from a text.
 
-Examples:
-
 ```js
 string.stripDiacritics("à ñ ã ç") // "a n a c"
 string.stripDiacritics("wê hávè sómê fãñçy téxt") // "we have some fancy text"
@@ -123,8 +105,6 @@ string.stripDiacritics("wê hávè sómê fãñçy téxt") // "we have some fanc
 
 Removes all spaces and make the first letter of every word uppercase
 
-Example:
-
 ```js
 string.toCamelCase("this is probally a pretty big text and maybe hard to read") // "thisIsProballyAPrettyBigTextAndMaybeHardToRead"
 string.toCamelCase("install vizality lol") // "installVizalityLol"
@@ -134,8 +114,6 @@ string.toCamelCase("install vizality lol") // "installVizalityLol"
 
 Removes all spaces and make the first letter of every word uppercase
 
-Example:
-
 ```js
 string.toCamelCase("this is probally a pretty big text and maybe hard to read") // "thisIsProballyAPrettyBigTextAndMaybeHardToRead"
 string.toCamelCase("install vizality lol") // "installVizalityLol"
@@ -144,8 +122,6 @@ string.toCamelCase("install vizality lol") // "installVizalityLol"
 #### `toDotCase(text)`
 
 adds.a.dot.for.every.word.returns.a.string
-
-example:
 
 ```js
 string.toDotCase("minecraft is a nice game") // minecraft.is.a.nice.game
@@ -164,8 +140,6 @@ string.toHash("this is some nice message btw") // "4551786520029978"
 
 adds-a-hyphen-for-every-word-returns-a-string
 
-example:
-
 ```js
 string.toKebabCase("minecraft is a nice game") // "minecraft-is-a-nice-game"
 ```
@@ -173,8 +147,6 @@ string.toKebabCase("minecraft is a nice game") // "minecraft-is-a-nice-game"
 #### `toPascalCase(text)`
 
 MakesEveryWordUppercaseAndItAlsoRemovesTheSpacesReturnsAnString
-
-Example:
 
 ```js
 string.toPascalCase("minecraft is a nice game") // "MinecraftIsANiceGame"
@@ -184,8 +156,6 @@ string.toPascalCase("minecraft is a nice game") // "MinecraftIsANiceGame"
 
 makes/text/to/look/like/an/posix/path
 
-Example:
-
 ```js
 string.toPathCase("minecraft is a nice game") // "minecraft/is/a/nice/game"
 ```
@@ -193,8 +163,6 @@ string.toPathCase("minecraft is a nice game") // "minecraft/is/a/nice/game"
 #### `toPlural(text)`
 
 Makes your string in the plural form
-
-Examples:
 
 ```js
 string.toPlural("pie") // "pies"
@@ -205,8 +173,6 @@ string.toPlural("magazine") // "magazines"
 
 Makes the first letter of the string uppercase
 
-Examples:
-
 ```js
 string.toSentenceCase("minecraft is a nice game") // "Minecraft is a nice game"
 string.toSentenceCase("free roblux 100% no virus") // "Free roblux 100 no virus"
@@ -215,8 +181,6 @@ string.toSentenceCase("free roblux 100% no virus") // "Free roblux 100 no virus"
 #### `toSingular(text)`
 
 Makes your string in the singular form
-
-Examples:
 
 ```js
 string.toPlural("pies") // "pie"
@@ -227,8 +191,6 @@ string.toPlural("magazines") // "magazine"
 
 replaces_all_spaces_by_underlines
 
-Examples:
-
 ```js
 string.toSnakeCase("minecraft is a nice game") // "minecraft_is_a_nice_game"
 ```
@@ -236,8 +198,6 @@ string.toSnakeCase("minecraft is a nice game") // "minecraft_is_a_nice_game"
 #### `toTitleCase(text)`
 
 Makes Only The First Letter Of The Words Uppercased
-
-Examples:
 
 ```js
 string.toTitleCase("minecraft is a nice game") // "Minecraft Is A Nice Game"

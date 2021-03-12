@@ -20,18 +20,14 @@ const { color } = require("@vizality/util")
 
 Asserts that the input is an array. If not, it throws an error, otherwise, nothing
 
-Examples:
-
 ```js
-array.assertArray(["bruh", "bRuh"]) // returns undefined
+array.assertArray(["bruh", "bRuh"]) // undefined
 array.assertArray("h") // Uncaught TypeError: Expected an array but received string.
 ```
 
 #### `getRandomItem(array)`
 
 Gets an random item from an array. It uses [lodash's sample function](https://lodash.com/docs/4.17.15#sample) for randomizing
-
-Examples:
 
 ```js
 array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 32
@@ -46,8 +42,6 @@ array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 32
 
 Checks if the input is an array. It returns `true` if input is an array and returns `false` if not
 
-Examples:
-
 ````js
 array.isArray("message logger go brrrr") // false
 array.isArray(["message logger go brrrr", 2, {a: ["no"]}, false]) // true
@@ -57,8 +51,6 @@ array.isArray(["message logger go brrrr", 2, {a: ["no"]}, false]) // true
 #### `isEmprtArray(input)`
 
 Check if array is empty. Returns `true` if yes and `false` if no
-
-Examples:
 
 ``` js
 array.isEmptyArray([]) // true
@@ -71,8 +63,6 @@ if(array.isEmptyArray([])) console.error("Array is empty!")
 #### (async) `toSentence(array [, lastItemConnector = 'and'])`
 
 This function returns an `Promise<string>` joining the array elements with `" and "` or `" or "` behind the elements.
-
-Example:
 
 ```js
 array.toSentence(["pain", "world"], "or") // Promise<"pain or world">
