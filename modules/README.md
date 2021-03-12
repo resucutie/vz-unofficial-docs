@@ -16,3 +16,11 @@ const { getModule, getModuleByDisplayName } = require('@vizality/webpack')
 const { patch, unpatch } = require('@vizality/patcher')
 ```
 
+Also, for debugging purposes, it can be found on the global variable `$vz`
+
+```js
+$vz.webpack.getModule("getGuild")
+$vz.util.string.chunkText("nope", 2)
+$vz.discord.user.getUserIds()
+```
+
