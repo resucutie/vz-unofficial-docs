@@ -16,7 +16,7 @@ const { color } = require("@vizality/util")
 
 ## Functions
 
-#### `assertArray(input)`<span id="AssertArrayHyperlink"><span>
+#### `assertArray(input)`
 
 Asserts that the input is an array. If not, it throws an error, otherwise, nothing
 
@@ -44,7 +44,7 @@ array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 32
 
 #### `isArray(input)`
 
-Checks if the input is an array. But instead of outputting an error like what happened in [assertArray](#AssertArrayHyperlink), it returns `true` if input is an array and returns `false` if not
+Checks if the input is an array. It returns `true` if input is an array and returns `false` if not
 
 Examples:
 
@@ -56,7 +56,7 @@ array.isArray(["message logger go brrrr", 2, {a: ["no"]}, false]) // true
 
 #### `isEmprtArray(input)`
 
-Check if array is empty. Retuns `true` if yes and `false` if no
+Check if array is empty. Returns `true` if yes and `false` if no
 
 Examples:
 
