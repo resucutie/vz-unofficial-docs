@@ -23,8 +23,8 @@ Asserts that the input is an array. If not, it throws an error, otherwise, nothi
 Examples:
 
 ```js
-$vz.util.array.assertArray(["bruh", "bRuh"]) // returns undefined
-$vz.util.array.assertArray("h") // Uncaught TypeError: Expected an array but received string.
+array.assertArray(["bruh", "bRuh"]) // returns undefined
+array.assertArray("h") // Uncaught TypeError: Expected an array but received string.
 ```
 
 #### `getRandomItem(array)`
@@ -34,12 +34,12 @@ Gets an random item from an array. It uses [lodash's sample function](https://lo
 Examples:
 
 ```js
-$vz.util.array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 32
-$vz.util.array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 16
-$vz.util.array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 16
-$vz.util.array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 2
-$vz.util.array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 0
-$vz.util.array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 32
+array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 32
+array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 16
+array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 16
+array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 2
+array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 0
+array.getRandomItem([0, 2, 4, 8, 16, 32, 64]) // 32
 ```
 
 #### `isArray(input)`
@@ -49,8 +49,8 @@ Checks if the input is an array. But instead of outputting an error like what ha
 Examples:
 
 ````js
-$vz.util.array.isArray("message logger go brrrr") // false
-$vz.util.array.isArray(["message logger go brrrr", 2, {a: ["no"]}, false]) // true
+array.isArray("message logger go brrrr") // false
+array.isArray(["message logger go brrrr", 2, {a: ["no"]}, false]) // true
 
 ````
 
@@ -61,11 +61,11 @@ Check if array is empty. Retuns `true` if yes and `false` if no
 Examples:
 
 ``` js
-$vz.util.array.isEmptyArray([]) // true
-$vz.util.array.isEmptyArray([0]) // false
+array.isEmptyArray([]) // true
+array.isEmptyArray([0]) // false
 
 //Actual example
-if($vz.util.array.isEmptyArray([])) console.error("Array is empty!")
+if(array.isEmptyArray([])) console.error("Array is empty!")
 ```
 
 #### (async) `toSentence(array [, lastItemConnector = 'and'])`
@@ -75,9 +75,9 @@ This function returns an `Promise<string>` joining the array elements with `" an
 Example:
 
 ```js
-$vz.util.array.toSentence(["pain", "world"], "or") // Promise<"pain or world">
-$vz.util.array.toSentence(["pain", "world"], "and") // Promise<"pain and world">
-$vz.util.array.toSentence([0, 1], "or") // Promise<undefined>
+array.toSentence(["pain", "world"], "or") // Promise<"pain or world">
+array.toSentence(["pain", "world"], "and") // Promise<"pain and world">
+array.toSentence([0, 1], "or") // Promise<undefined>
 ```
 
 

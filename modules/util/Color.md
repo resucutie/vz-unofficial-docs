@@ -23,8 +23,8 @@ Finds an color between two colors. Returns a `string` with the hex value
 Examples:
 
 ```js
-$vz.util.color.blendColors("#000000", "#ffffff") // returns "#808080"
-$vz.util.color.blendColors("#ff0000", "#ffff00", .75) // returns "#ffbf00"
+color.blendColors("#000000", "#ffffff") // returns "#808080"
+color.blendColors("#ff0000", "#ffff00", .75) // returns "#ffbf00"
 ```
 
 
@@ -36,10 +36,10 @@ Gets the type of the color. Returns a `string` with 4 possible values: `hex`, `i
 Examples:
 
 ```js
-$vz.util.color.getColorType("#000000") // returns "hex"
-$vz.util.color.getColorType("0, 0, 0") // returns "int"
-$vz.util.color.getColorType("rgb(0, 0, 0)") // returns "rgb"
-$vz.util.color.getColorType("hsl(0, 0%, 100%)") // returns "hsl"
+color.getColorType("#000000") // returns "hex"
+color.getColorType("0, 0, 0") // returns "int"
+color.getColorType("rgb(0, 0, 0)") // returns "rgb"
+color.getColorType("hsl(0, 0%, 100%)") // returns "hsl"
 ```
 
 
@@ -51,22 +51,22 @@ Complements an hex color. Returns a `string` with the corrections
 Examples:
 
 ```js
-$vz.util.color.getComplement("#000") // returns "#000000"
+color.getComplement("#000") // returns "#000000"
 ```
 
 
 
 #### `getContrastColor(color)`
 
-Check if color is next to white or black, and return a `string`, depending if it's black or not. Here it is a quote from Dustin Perolio explaning the functionality:
+Check if color is next to white or black, and return a `string`, depending if it's black or not. Here it is a quote from Dustin Perolio explaining the functionality:
 
 > Basically, it returns white or black, depending on the background color. Darker backgrounds will return white, lighter will return black. It's an accessibility thing.
 
 Examples:
 
 ```js
-$vz.util.color.getContrastColor("#4c7bef") // returns "#fff"
-$vz.util.color.getContrastColor("#67c6a1") // returns "#000"
+color.getContrastColor("#4c7bef") // returns "#fff"
+color.getContrastColor("#67c6a1") // returns "#000"
 ```
 
 
@@ -78,7 +78,7 @@ Returns a random color in the hex form (if not specified what type to return)
 Example:
 
 ```js
-$vz.util.color.getRandomColor() // returns "#a04222"
+color.getRandomColor() // returns "#a04222"
 ```
 
 
@@ -92,9 +92,9 @@ Applies a hue rotation on the color. The rotation can go from 0º to 360º. Here
 Examples:
 
 ```js
-$vz.util.color.rotateHue("#752bba", 180) // returns "#70ba2b"
-$vz.util.color.rotateHue("#d6307c", 90) // returns "#cfd630"
-$vz.util.color.rotateHue("#205651", 360) // returns "#205651"
+color.rotateHue("#752bba", 180) // returns "#70ba2b"
+color.rotateHue("#d6307c", 90) // returns "#cfd630"
+color.rotateHue("#205651", 360) // returns "#205651"
 ```
 
 
@@ -104,10 +104,10 @@ $vz.util.color.rotateHue("#205651", 360) // returns "#205651"
 Makes a color darker or brighter. Examples:
 
 ```js
-$vz.util.color.shadeColor("#0ffbe6", 0.5) // returns "#87fdf3"
-$vz.util.color.shadeColor("#4a6305", -0.5) // returns "#253203"
-$vz.util.color.shadeColor("#9c453c", 1) // returns "#ffffff"
-$vz.util.color.shadeColor("#fa5725", -1) // returns "#000000"
+color.shadeColor("#0ffbe6", 0.5) // returns "#87fdf3"
+color.shadeColor("#4a6305", -0.5) // returns "#253203"
+color.shadeColor("#9c453c", 1) // returns "#ffffff"
+color.shadeColor("#fa5725", -1) // returns "#000000"
 ```
 
 
