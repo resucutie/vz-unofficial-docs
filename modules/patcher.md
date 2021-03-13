@@ -30,17 +30,6 @@ getPatchesByCaller('plugin-installer');
 
 The method used to patch a function in a module.
 
-###### Values
-
-|       Strings       |                         Explanation                          |           Available/Expected values            |   Default value   |
-| :-----------------: | :----------------------------------------------------------: | :--------------------------------------------: | :---------------: |
-|         id          | The ID of the patch, so Vizality can unpatch when the plugin is disabled |                     String                     |                   |
-|    moduleToPatch    |                     The module to patch                      | Object, specifically one gotten from getModule |                   |
-|        func         |                  The function name to patch                  |                     String                     |                   |
-|    patchFunction    |                      The code to insert                      |              Function (args, res)              |                   |
-|        type         | If it should patch before or after the function is initiated |                     String                     | "before", "after" |
-| { failSave = true } |               I have no idea to what this does               |                      ???                       |        { }        |
-
 ###### Importing
 
 ```js
