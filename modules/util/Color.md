@@ -135,3 +135,7 @@ Makes a color more darker or brighter.
 ## Removed functions
 
 For now, there isn't any function that got removed
+
+
+
+*`Edited at 13/03/2021`*

@@ -11,3 +11,7 @@ Welcome to the **Vizality plugin development tutorial!** This tutorial will guid
 - And more!
 
 Free feel to ask any question in [Vizality's server](https://invite.vizality.com/) at #plugins channel
+
+
+
+*`Edited at 13/03/2021`*

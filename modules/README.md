@@ -24,3 +24,6 @@ $vz.util.string.chunkText("nope", 2)
 $vz.discord.user.getUserIds()
 ```
 
+
+
+*`Edited at 13/03/2021`*

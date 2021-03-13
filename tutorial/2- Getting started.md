@@ -134,3 +134,6 @@ Well, you'll see that there is a lot of plugins that have an icon. This is a key
 "icon": "path/to/icon",
 ```
 
+
+
+*`Edited at 13/03/2021`*

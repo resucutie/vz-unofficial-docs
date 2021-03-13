@@ -153,3 +153,7 @@ unpatch("example-message-context-menu");
 ## Removed functions
 
 For now, there isn't any function that got removed
+
+
+
+*`Edited at 13/03/2021`*
