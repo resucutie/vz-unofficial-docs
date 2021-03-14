@@ -51,17 +51,17 @@ patch("patchId", module, "functionName", (args, res) => {
 ###### Examples
 
 ```jsx
-const Menu = getModule("MenuGroup", "MenuItem");
+import { ContextMenu } from "@vizality/components"
 const MessageContextMenu = getModule(m => m?.default?.displayName === "MessageContextMenu");
 patch("example-message-context-menu", MessageContextMenu, "default", (args, res) => {
 	res.props.children.push(
-		<Menu.MenuGroup>
-			<Menu.MenuItem
+		<ContextMenu.Group>
+			<ContextMenu.Item
 				label="Test Item"
 				id="test-item"
 				action={() => console.log("Hello!")}
 			/>
-        </Menu.MenuGroup>
+        </ContextMenu.Group>
     )
 });
 ```
