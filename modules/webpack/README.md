@@ -221,13 +221,48 @@ getModulesByKeyword("keyword", exact) // where exact can be true or not. Default
 
 ###### What is the difference behind `getModulesByKeyword(keyword, true)` and `getModule` by itself?
 
-Stangely, Discord sometimes exports the same function in different modules. For example: the function `getGuildId` is exported in 5 different modules, as you can check in this photo:
+Strangely, Discord sometimes exports the same function in different modules. For example: the function `getGuildId` is exported in 5 different modules, as you can check in this photo:
 
 ![](https://auser.ipgrabber.link/E8AB7f9.png)
 
+`getModule` returns the first result. Using `getModulesByKeyword` will return every single module with that function.
+
 #### `getModuleByPrototypes(filter [, retry = false, forever = false])`
 
-*to be written*
+Searches for every module that has in its prototype `filter`
+
+`filter` is an array with strings containing the name of the prototypes that you're trying to find
+
+If `retry = true` it will retry fetching if the module is not found. Each try will be delayed by 100ms and max retries is 20.
+
+If `forever = true` it will try to fetch the module forever. Should be used only if you're in early stages of startup.
+
+###### Importing
+
+```js
+// ES6
+import { getModuleByPrototypes } from '@vizality/webpack'
+
+// CJS
+const { getModuleByPrototypes } = require('@vizality/webpack')
+```
+
+###### Usage
+
+```js
+getModuleByPrototypes(function(), retry, forever)
+/* where:
+* retry can be true or not. Default is false
+* forever can be true or not. Default is false
+*/
+```
+
+###### Examples
+
+```js
+getModuleByPrototypes(["getGuildId"]) // function
+getModuleByPrototypes(["getGuildId", "getLastSelectedGuildId"]) // function
+```
 
 #### `getModules(filter)`
 
@@ -265,13 +300,17 @@ getModules(m => m.default?.prototype?.render) // will find every module that has
 
 Those modules were exported to get an quick acess to them. Also there is pages for them
 
+#### Flux
+
+Module that updates an React component when a variable updates
+
 #### React
 
-Discord's libary for rendering
+Discord's framework library
 
 #### messages
 
-Some message utils
+Message utils from discord
 
 *more will be written*
 

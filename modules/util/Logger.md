@@ -76,11 +76,11 @@ logger.deprecate({
 
 You've probably seen that all of functions here have the `options` value. Well, `options` is an object with specific parameters, listed in this table:
 
-|    Key    |                        Expected value                        |         Default value         |
-| :-------: | :----------------------------------------------------------: | :---------------------------: |
-|  `badge`  |               String with an URL for an image                | `'vz-asset://image/logo.png'` |
-| `labels`  | Array (object) with labels.<br />Every label should have the `text` and the `color` keys |             `[]`              |
-| `message` |                            String                            |                               |
+|   Key   |     Description     |      Expected value      |         Default value         |
+| :-----: | :-----------------: | :----------------------: | :---------------------------: |
+| badge?  |  URL of the badge   |          String          | `'vz-asset://image/logo.png'` |
+| labels? | List of all labels. | Array<[labels](#labels)> |             `[]`              |
+| message | Message of the text |          String          |                               |
 
 This image shows an example of all parameters in action:
 
@@ -89,3 +89,28 @@ This image shows an example of all parameters in action:
 And with the less information as possible:
 
 ![](https://auser-loves.femboy.art/904E44b.png)
+
+###### labels
+
+You've notices that there is some "badges" on the logger. Those are called labels, and you can check all possible values here:
+
+|  Key   |        Description        |  Expected value   | Default value |
+| :----: | :-----------------------: | :---------------: | :-----------: |
+|  text  | Text to show on the label |      String       |               |
+| color? |    Color of the label     | String (hex code) | Random color  |
+
+
+
+## Deprecated/Non-functional functions
+
+For now, there isn't any deprecated functions
+
+
+
+## Removed functions
+
+For now, there isn't any function that got removed
+
+
+
+*`Edited at 19/03/2021`*

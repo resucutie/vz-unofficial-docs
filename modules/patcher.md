@@ -74,18 +74,18 @@ patch("example-message-send", getModule("sendMessage"), "sendMessage", (args, re
 
 ###### Values
 
-|    Strings    |                         Explanation                          |           Available/Expected values            |   Default value   |
-| :-----------: | :----------------------------------------------------------: | :--------------------------------------------: | :---------------: |
-|      id       | The ID of the patch, so Vizality can unpatch when the plugin is disabled |                     String                     |                   |
-| moduleToPatch |                     The module to patch                      | Object, specifically one gotten from getModule |                   |
-|     func      |                  The function name to patch                  |                     String                     |                   |
-| patchFunction |                      The code to insert                      |              Function (args, res)              |                   |
-|     type      | If it should patch before or after the function is initiated |                     String                     | "before", "after" |
-| { failSave }  | According to Strencher, if any patch throws more than 5 errors, that option will unpatch automatically to prevent crash loops |                     Object                     |       true        |
+|    Strings    |                         Explanation                          |           Available/Expected values            |     Default value     |
+| :-----------: | :----------------------------------------------------------: | :--------------------------------------------: | :-------------------: |
+|      id       | The ID of the patch, so Vizality can unpatch when the plugin is disabled |                     String                     |                       |
+| moduleToPatch |                     The module to patch                      | Object, specifically one gotten from getModule |                       |
+|     func      |                  The function name to patch                  |                     String                     |                       |
+| patchFunction |                      The code to insert                      |              Function (args, res)              |                       |
+|     type?     | If it should patch before or after the function is initiated |                     String                     |   "before", "after"   |
+|   failSave?   | According to Strencher, if any patch throws more than 5 errors, that option will unpatch automatically to prevent crash loops |                     Object                     | `{ failSave = true }` |
 
 ###### Notes
 
-* patchFunction returns `res` or `args`. Automatically Vizality does that
+* patchFunction should return `res` or `args`. Vizality automatically does that for you
 
 #### `patches`
 
