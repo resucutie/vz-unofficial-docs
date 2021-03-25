@@ -73,15 +73,15 @@ this.registerSettings(EpicSettings)
 
 #### `log(...message)`
 
-Alias to [logger](../modules/util/Logger.md).log
+Alias to [logger.log](../modules/util/Logger.md#logoptions)
 
 #### `warn(...message)`
 
-Alias to [logger](../modules/util/Logger.md).warn
+Alias to [logger.warn](../modules/util/Logger.md#warnoptions)
 
 #### `error(...message)`
 
-Alias to [logger](../modules/util/Logger.md).error
+Alias to [logger.error](../modules/util/Logger.md#erroroptions)
 
 
 
