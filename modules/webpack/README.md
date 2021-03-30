@@ -6,7 +6,7 @@ Utilities related to the global variable `webpackJsonp`
 
 ## `webpackJsonp`? What that means?
 
-`webpackJsonp` is an array full with modules that discord exports to use in different parts of itself. You can acess it by typing `webpackJsonp` on console, but it is kinda unorganized and hard to find them, since they're separated in a bunch of arrays.
+`webpackJsonp` is an array full with modules that discord exports to use in different parts of itself. You can acess it by typing `webpackJsonp` on console, but it is kinda unorganized and hard to find them, since they're separated in a bunch of arrays inside arrays (yes, you heard that right, arrays inside arrays).
 
 ![webpackJsonp in its true form](https://auser.ipgrabber.link/BfA778B.png)
 
@@ -342,4 +342,4 @@ For now, there isn't any function that got removed
 
 
 
-*`Edited at 18/03/2021`*
+*`Edited at 30/03/2021`*
