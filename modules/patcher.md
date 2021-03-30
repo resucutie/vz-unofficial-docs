@@ -6,9 +6,9 @@ Patches discord's function to modify the behavior of it
 
 ## Functions
 
-#### `getPatchesByCaller([caller = $vz.util.file.getCaller()])`
+#### `getPatchesByCaller([caller = util.file.getCaller()])`
 
-Returns any patches under the specified patchId.
+Returns any patches from the plugin.
 
 ###### Importing
 

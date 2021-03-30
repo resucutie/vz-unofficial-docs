@@ -74,7 +74,7 @@ console.log(getGuildId())
 
 ###### `getModule` and patching
 
-According to patching, it requires patching a module, and not a function. Thats a common mistake made by a lot of developers. Check this example:
+According to [patching](../patcher.md#patchid-moduletopatch-func-patchfunction-type--after--failsave--true---), it requires patching a module, and not a function. Thats a common mistake made by a lot of developers. Check this example:
 
 ```js
 // wrong
@@ -100,7 +100,7 @@ Sometimes you'll find lines of code like this:
 getModule("module", "anotherModule")
 ```
 
-Strangely, Discord sometimes exports the same function in different modules, or different functions with the same name. For example: the function `getGuildId` is exported in 5 different modules, as you can check in this photo:
+Strangely, Discord sometimes exports the same function in different modules, or different functions with the same name. For example: the function `getGuildId` is exported in the same way in 5 different modules, as you can check in this photo:
 
 ![](https://auser.ipgrabber.link/E8AB7f9.png)
 
