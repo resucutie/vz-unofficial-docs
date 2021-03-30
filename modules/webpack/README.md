@@ -1,16 +1,16 @@
 # Webpack
 
-Utilities relationed to the global variable `webpackJsonp`
+Utilities related to the global variable `webpackJsonp`
 
 
 
-## `webpackJsonp`?? What that means?
+## `webpackJsonp`? What that means?
 
 `webpackJsonp` is an array full with modules that discord exports to use in different parts of itself. You can acess it by typing `webpackJsonp` on console, but it is kinda unorganized and hard to find them, since they're separated in a bunch of arrays.
 
 ![webpackJsonp in its true form](https://auser.ipgrabber.link/BfA778B.png)
 
-This code will unorganize it and make easier for computers to find modules
+This code will unorganize it and make easier for finding modules
 
 ```js
 webpackJsonp.push([[],{[''] :(_,e,r)=>{e.cache=r.c}},[['']]]).cache
@@ -74,7 +74,7 @@ console.log(getGuildId())
 
 ###### `getModule` and patching
 
-According to patching, it requires patching a module, and not a function. Thats a commom mistake made by a lot of developers. Check this example:
+According to patching, it requires patching a module, and not a function. Thats a common mistake made by a lot of developers. Check this example:
 
 ```js
 // wrong
@@ -90,6 +90,24 @@ console.log(typeof ListSectionItem) // object (this can be considered as an modu
 patch("getModule-and-patch", ListSectionItem, "default", (args, res) => {
 	console.log(args, res)
 });
+```
+
+###### Filter for more than one module
+
+Sometimes you'll find lines of code like this:
+
+```js
+getModule("module", "anotherModule")
+```
+
+Strangely, Discord sometimes exports the same function in different modules, or different functions with the same name. For example: the function `getGuildId` is exported in 5 different modules, as you can check in this photo:
+
+![](https://auser.ipgrabber.link/E8AB7f9.png)
+
+So, if we wanna get the `getGuildId` from `ID_18`, we use one of the exported functions to filter it
+
+```js
+getModule("getGuildId", "getState")
 ```
 
 #### `getModuleByDisplayName(displayName [, retry = false, forever = false])`
@@ -221,11 +239,7 @@ getModulesByKeyword("keyword", exact) // where exact can be true or not. Default
 
 ###### What is the difference behind `getModulesByKeyword(keyword, true)` and `getModule` by itself?
 
-Strangely, Discord sometimes exports the same function in different modules. For example: the function `getGuildId` is exported in 5 different modules, as you can check in this photo:
-
-![](https://auser.ipgrabber.link/E8AB7f9.png)
-
-`getModule` returns the first result. Using `getModulesByKeyword` will return every single module with that function.
+It was explained that a function can be exported in multiple modules [here](#filter-for-more-than-one-module). `getModule` returns the first result. `getModulesByKeyword` returns every single module with that function.
 
 #### `getModuleByPrototypes(filter [, retry = false, forever = false])`
 
