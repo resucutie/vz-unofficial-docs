@@ -2,6 +2,16 @@
 
 Utilities for DOM manipulation
 
+## Importing
+
+```js
+// ES6
+import { dom } from "@vizality/util"
+
+// Commom JS
+const { dom } = require("@vizality/util")
+```
+
 
 
 ## Functions
@@ -119,4 +129,4 @@ For now, there isn't any function that got removed
 
 
 
-*`Edited at 19/03/2021`*
+*`Edited at 24/03/2021`*

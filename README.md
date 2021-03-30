@@ -3,5 +3,5 @@ Welcome to my vizality's unofficial documentation. I (A user) made this because,
 
 
 
-Server if you wanna join: https://discord.gg/MePWNgHNZB
+This documentation's server if you talk a bit: https://discord.gg/MePWNgHNZB
 
