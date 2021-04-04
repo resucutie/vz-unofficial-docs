@@ -22,19 +22,19 @@ The `Command` object is how Vizality actually reads commands. This is an example
 
 This is an table with all possible values in the `Command` object:
 
-|     Name      |                         Description                          |          Expected value           |  Default value   |
-| :-----------: | :----------------------------------------------------------: | :-------------------------------: | :--------------: |
-|    command    |                        Command's name                        |              String               |                  |
-|   executor    |     Function that executes when the command is executed      |             Function              |                  |
-|   aliases?    |      Aliases that the developer can add for the command      |          Array\<String>           |                  |
-|     icon?     |                 Command Icon. Can be an URL                  |              String               |                  |
-| description?  |                    Command's description                     |              String               |                  |
-| autocomplete? |         Function that returns all possible commands          |    Function (returning object)    |                  |
-| subcommands?  |         [Subcommands](#Subcommands) for the command          | Array<[Subcommand](#Subcommands)> |                  |
-|   options?    |                   Options for the command                    |    Array<[Options](#Options)>     |                  |
-|    source?    | According to command's JSDoc, it will be the source text to the right in the autocomplete. |              String               |                  |
-|  showTyping?  |              If it should show you when typing               |              Boolean              |      false       |
-|    caller?    |            Origin of where the command came from             |              String               | *(addon's name)* |
+|     Name      |                         Description                          |                        Expected value                        |  Default value   |
+| :-----------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :--------------: |
+|    command    |                        Command's name                        |                            String                            |                  |
+|   executor    |     Function that executes when the command is executed      | Function(args)<[Executor's return value](#executors-return-value)> |                  |
+|   aliases?    |      Aliases that the developer can add for the command      |                        Array\<String>                        |                  |
+|     icon?     |                 Command Icon. Can be an URL                  |                            String                            |                  |
+| description?  |                    Command's description                     |                            String                            |                  |
+| autocomplete? |         Function that returns all possible commands          |                       Function<object>                       |                  |
+| subcommands?  |         [Subcommands](#Subcommands) for the command          |              Array<[Subcommand](#Subcommands)>               |                  |
+|   options?    |                   Options for the command                    |                  Array<[Options](#Options)>                  |                  |
+|    source?    | According to command's JSDoc, it will be the source text to the right in the autocomplete. |                            String                            |                  |
+|  showTyping?  |              If it should show you when typing               |                           Boolean                            |      false       |
+|    caller?    |            Origin of where the command came from             |                            String                            | *(addon's name)* |
 
 #### Options
 
@@ -426,4 +426,4 @@ For now, there isn't any function that got removed
 
 
 
-*`Edited at 19/03/2021`*
+*`Edited at 03/04/2021`*
