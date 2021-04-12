@@ -12,14 +12,6 @@ import { Button } from "@vizality/components"
 
 
 
-## Usage
-
-```jsx
-<Button>text</Button>
-```
-
-
-
 ## Example
 
 ```jsx
@@ -76,7 +68,7 @@ You can access all discord's looks in `Button.Looks`. Here it is all possible va
 
 Sets the size of the button
 
-You can access all discord's looks in `Button.SIZES`. Here it is all possible values:
+You can access all discord's looks in `Button.Sizes`. Here it is all possible values:
 
 |  Value   |                            Result                            |
 | :------: | :----------------------------------------------------------: |
@@ -104,4 +96,4 @@ For now, there isn't any function that got removed
 
 
 
-*`Edited at 30/03/2021`*
+*`Edited at 11/04/2021`*

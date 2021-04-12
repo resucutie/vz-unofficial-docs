@@ -4,10 +4,18 @@ Context Menu component mostly used when you right click something
 
 ![](https://auser.foundyour.info/95C8Ed9.png)
 
+## Importing
+
+```jsx
+import { ContextMenu } from "@vizality/components"
+```
+
+
+
 ## Example
 
 ```jsx
-<Icon
+<span
     onContextMenu={e => {
         contextMenu.openContextMenu(e, () => {
     		return <ContextMenu.Menu onClose={contextMenu.closeContextMenu}>
@@ -29,9 +37,7 @@ Context Menu component mostly used when you right click something
 			</ContextMenu.Menu>
 		})
     }}
->
-
-</Icon>
+> Stfu </span>
 ```
 
 
