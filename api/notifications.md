@@ -12,22 +12,22 @@ The `VizalityToast` object is how Vizality actually interprets toasts. This is t
 
 ```js
 {
-  header: 'Epic notification',
-  content: 'I do some epic bowling',
-  icon: {
-    name: 'Bowling',
-    size: 60
-  },
-  buttons: [
-    {
-      text: 'Whatever',
-      color: 'red',
+    header: 'Epic notification',
+    content: 'I do some epic bowling',
+    icon: {
+        name: 'Bowling',
+        size: 60
     },
-    {
-      text: 'Cool',
-      color: 'green'
-    }
-  ]
+    buttons: [
+        {
+            text: 'Whatever',
+            color: 'red',
+        },
+        {
+            text: 'Cool',
+            color: 'green'
+        }
+    ]
 }
 ```
 
@@ -84,14 +84,14 @@ The `VizalityNotice` object is how Vizality actually interprets notices. This is
 
 ```js
 {
-  message: "pie",
-  color: "BLURPLE_GRADIENT_2",
-  buttons: [
-      {
-        text: "cool",
-        onClick: ()=> vizality.api.notifications.closeAllActiveToasts()
-      }
-  ]
+    message: "pie",
+    color: "BLURPLE_GRADIENT_2",
+    buttons: [
+        {
+            text: "cool",
+            onClick: ()=> vizality.api.notifications.closeAllActiveToasts()
+        }
+    ]
 }
 ```
 
@@ -116,4 +116,76 @@ This is another object where it says to Vizality how it will render the button i
 | :------: | :------------------------: | :------------: | :--------------------------: |
 |   text   |        Button text         |     String     |                              |
 | onClick? | Function executed on click |   Function()   | Closes the toast by default. |
+
+
+
+## Functions
+
+### Toast related
+
+#### `sendToast(toast)`
+
+Creates a new toast
+
+`toast` is a [VizalityToast](#VizalityToast) or a ReactElement
+
+```js
+vizality.api.notifications.sendToast({
+    header: 'Epic notification',
+    content: 'I do some epic bowling',
+    icon: {
+        name: 'Bowling',
+        size: 60
+    },
+    buttons: [
+        {
+            text: 'Whatever',
+            color: 'red',
+        },
+        {
+            text: 'Cool',
+            color: 'green'
+        }
+    ]
+})
+```
+
+
+
+### Notice related
+
+#### `sendNotice(notice)`
+
+Creates a new notice
+
+`notice` is a [VizalityNotice](#VizalityNotice)
+
+```js
+vizality.api.notifications.sendNotice({
+    message: "pie",
+    color: "BLURPLE_GRADIENT_2",
+    buttons: [
+            {
+                text: "cool",
+                onClick: ()=> vizality.api.notifications.closeAllActiveToasts()
+            }
+    ]
+})
+```
+
+#### `isNotice(noticeId)`
+
+Checks if a notice is active
+
+It will return `true` if it is active and `false` if not
+
+`noticeId` is the notice's ID
+
+```js
+vizality.api.notifications.sendNotice({
+	message: "nah",
+    id: "bruh"
+})
+vizality.api.notifications.isNotice("bruh") // true
+```
 
