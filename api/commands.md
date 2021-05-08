@@ -4,9 +4,9 @@ API for managing commands
 
 
 
-## `Command` Object
+## `VizalityCommand`
 
-The `Command` object is how Vizality actually reads commands. This is an example of an command object:
+The `VizalityCommand` object is how Vizality actually reads commands. This is an example of an command object:
 
 ```js
 {
@@ -20,7 +20,7 @@ The `Command` object is how Vizality actually reads commands. This is an example
 }
 ```
 
-This is an table with all possible values in the `Command` object:
+This is an table with all values in the `Command` object:
 
 |     Name      |                         Description                          |                        Expected value                        |  Default value   |
 | :-----------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :--------------: |
@@ -30,7 +30,7 @@ This is an table with all possible values in the `Command` object:
 |     icon?     |                 Command Icon. Can be an URL                  |                            String                            |                  |
 | description?  |                    Command's description                     |                            String                            |                  |
 | autocomplete? |         Function that returns all possible commands          |                       Function<object>                       |                  |
-| subcommands?  |         [Subcommands](#Subcommands) for the command          |              Array<[Subcommand](#Subcommands)>               |                  |
+| subcommands?  |      [Subcommands](#VizalitySubcommand) for the command      |       Array<[VizalitySubcommand](#VizalitySubcommand)>       |                  |
 |   options?    |                   Options for the command                    |                  Array<[Options](#Options)>                  |                  |
 |    source?    | According to command's JSDoc, it will be the source text to the right in the autocomplete. |                            String                            |                  |
 |  showTyping?  |              If it should show you when typing               |                           Boolean                            |      false       |
@@ -60,7 +60,7 @@ And a table with all available values:
 |   name    |      Option's name       |     String     |               |
 | required? | If it is required or not |    Boolean     |     false     |
 
-#### Subcommands
+#### `VizalitySubcommand`
 
 According to the revision that this documentation was written ([49f50da](https://github.com/vizality/vizality/commit/49f50dae19c6193e03f2f7d8e29c31e58059c6b6)), this feature wasn't added. But according to Vizality's JSDoc comments, it should be a thing for helping configuring plugin developers subcommands for their commands.
 
@@ -261,7 +261,7 @@ vizality.api.commands.getCommandsByCaller("addon-manager") // Array<command>
 
 #### `hasSubcommands(commandName)`
 
-Checks if command has [subcommands](#Subcommands)
+Checks if command has [subcommands](#VizalitySubcommand)
 
 `commandName` is command's name
 
@@ -334,7 +334,7 @@ vizality.api.commands.prefix // "."
 
 Register a command
 
-`command` is [Command's object](#command-object)
+`command` is [VizalityCommand](#VizalitySubcommand)
 
 ###### Usage
 
@@ -426,4 +426,4 @@ For now, there isn't any function that got removed
 
 
 
-*`Edited at 03/04/2021`*
+*`Edited at 07/05/2021`*

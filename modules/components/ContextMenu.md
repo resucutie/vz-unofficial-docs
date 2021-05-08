@@ -101,7 +101,7 @@ The children of the context menu will be the sub context menu of it.
 
 ###### `color` possible values
 
-As it is known, `color` can have two values. Both of them are strings
+As it is known for now, `color` can have two values. Both of them are strings
 
 | Possible values |                           Preview                            |
 | :-------------: | :----------------------------------------------------------: |
