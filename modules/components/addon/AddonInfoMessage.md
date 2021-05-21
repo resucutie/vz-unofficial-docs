@@ -2,7 +2,7 @@
 
 Renders a message regarding an addon, including the addon icon and name. Typically used in informational toast notifications and modal alerts.
 
-![](C:\Users\WhoDo\AppData\Roaming\Typora\typora-user-images\image-20210519204247126.png)
+![](../../../assets/image-20210519204247126.png)
 
 ## Importing
 
