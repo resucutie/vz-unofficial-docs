@@ -13,11 +13,7 @@ Returns any patches from the plugin.
 ###### Importing
 
 ```js
-// ES6
 import { getPatchesByCaller } from "@vizality/patcher";
-
-// Commom JS
-const { getPatchesByCaller } = require("@vizality/patcher");
 ```
 
 ###### Example
@@ -33,11 +29,7 @@ The method used to patch a function in a module.
 ###### Importing
 
 ```js
-// ES6
 import { patch } from "@vizality/patcher";
-
-// Commom JS
-const { patch } = require("@vizality/patcher");
 ```
 
 ###### Usage

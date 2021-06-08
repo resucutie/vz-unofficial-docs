@@ -7,11 +7,7 @@ Main class for Vizality APIs.
 ## Importing
 
 ```js
-// ES6
 import { API } from "@vizality/entities"
-
-// CJS
-const { API } = require("@vizality/entities")
 ```
 
 

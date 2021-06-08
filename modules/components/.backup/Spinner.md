@@ -2,7 +2,7 @@
 
 A visual indicator that something is loading in background
 
-![](../../assets/0d5D292_1.gif)
+![](https://cdn.discordapp.com/attachments/828029962660872243/828030291528384542/0d5D292_1.gif)
 
 ## Importing
 

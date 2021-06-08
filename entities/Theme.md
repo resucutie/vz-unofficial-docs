@@ -9,11 +9,7 @@ Entity for themes. Yes, this is actually a thing
 ## Importing
 
 ```js
-// ES6
 import { Theme } from "@vizality/entities"
-
-// CJS
-const { Theme } = require("@vizality/entities")
 ```
 
 

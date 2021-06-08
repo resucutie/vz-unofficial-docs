@@ -1,0 +1,23 @@
+{
+  "name": "img-extractor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "babel . -d .compiled",
+    "start": "npm run compile && node .compiled/index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.14.0",
+    "colors": "^1.4.0",
+    "markdown-link-extractor": "^1.2.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.4"
+  }
+}

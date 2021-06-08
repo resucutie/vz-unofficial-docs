@@ -7,11 +7,7 @@ Entity that works similar as the [Plugin](./Plugin.md) entity, but designed for 
 ## Importing
 
 ```js
-// ES6
 import { Builtin } from "@vizality/entities"
-
-// CJS
-const { Builtin } = require("@vizality/entities")
 ```
 
 

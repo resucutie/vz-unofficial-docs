@@ -20,45 +20,23 @@ The `VizalityCommand` object is how Vizality actually reads commands. This is an
 }
 ```
 
-This is an table with all values in the `Command` object:
+#### Values
 
-|     Name      |                         Description                          |                        Expected value                        |  Default value   |
-| :-----------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :--------------: |
-|    command    |                        Command's name                        |                            String                            |                  |
-|   executor    |     Function that executes when the command is executed      | Function(args)<[Executor's return value](#executors-return-value)> |                  |
-|   aliases?    |      Aliases that the developer can add for the command      |                        Array\<String>                        |                  |
-|     icon?     |                 Command Icon. Can be an URL                  |                            String                            |                  |
-| description?  |                    Command's description                     |                            String                            |                  |
-| autocomplete? |         Function that returns all possible commands          |                       Function<object>                       |                  |
-| subcommands?  |      [Subcommands](#VizalitySubcommand) for the command      |       Array<[VizalitySubcommand](#VizalitySubcommand)>       |                  |
-|   options?    |                   Options for the command                    |                  Array<[Options](#Options)>                  |                  |
-|    source?    | According to command's JSDoc, it will be the source text to the right in the autocomplete. |                            String                            |                  |
-|  showTyping?  |              If it should show you when typing               |                           Boolean                            |      false       |
-|    caller?    |            Origin of where the command came from             |                            String                            | *(addon's name)* |
+* `command ` String - Command's name
+* `executor` Function(args) - Function that executes when the command is executed. It should return the [Executor's return value](#executors-return-value)
+* `aliases` Array\<String> (optional) - Aliases that the developer can add for the command
+* `icon` String (optional) - Command Icon. Can be an URL
+* `description` String (optional) - Command's description
+* `autocomplete` Function() (optional) - Function that returns all possible commands. It should return an object
+* `subcommands` Array<[VizalitySubcommand](#VizalitySubcommand)> (optional) - [Subcommands](#VizalitySubcommand) for the command
+* `options` Array<Object>
+  * `name` String - Option's name
+  * `required` Boolean (optional) - If it is required or not. Default is `false`
+* `source` String (optional) - Source text to the right in the autocomplete
+* `showTyping` Boolean (optional) - If it should show you when typing. Default is `false`
+* `caller` String (optional) - Origin of where the command came from. Defailt is the addon's name
 
-#### Options
 
-All options for the command. Here it is what actually means:
-
-![](https://auser-got-your.censored.pictures/AE5a39f.png)
-
-###### Expected values
-
-It should return an object. This is an example of what should return:
-
-```js
-{
-    name: "hi",
-    required: true
-}
-```
-
-And a table with all available values:
-
-|   Name    |       Description        | Expected value | Default value |
-| :-------: | :----------------------: | :------------: | :-----------: |
-|   name    |      Option's name       |     String     |               |
-| required? | If it is required or not |    Boolean     |     false     |
 
 #### `VizalitySubcommand`
 
@@ -87,26 +65,24 @@ It should be used in that way:
 }
 ```
 
-And a table of how all listed possible values
+##### Values
 
-|     Name     |                      Description                       |          Expected value           | Default value |
-| :----------: | :----------------------------------------------------: | :-------------------------------: | :-----------: |
-|   command    |                   Subcommand's name                    |              String               |               |
-|   executor   | Function that executes when the subcommand is executed |             Function              |               |
-|   aliases?   | Aliases that the developer can add for the subcommand  |          Array\<String>           |               |
-|    icon?     |             Subcommand icon. Can be an URL             |              String               |               |
-| description? |                 Command's description                  |              String               |               |
-| subcommand?  |     [Subcommands](#Subcommands) for the subcommand     | Array<[Subcommand](#Subcommands)> |               |
-|   options?   |               Options for the subcommand               |    Array<[Options](#Options)>     |               |
+* `command` String - Subcommand's name
+* `executor` Function() - Function that executes when the subcommand is executed
+* `aliases` Array<String> (optional) - Aliases that the developer can add for the subcommand
+* `icon` String (optional) - Subcommand icon. Can be an URL
+* `description` String (optional) - Command's description
+* `subcommand` Array<[Subcommand](#Subcommands)> (optional) - Subcommands for the subcommand
+* `options` Array<Object> - Options for the subcommand
+  * `name` String - Option's name
+  * `required` Boolean (optional) - If it is required or not. Default is `false`
 
 #### Executor's return value
 
-You've probably noticed that there is a return value. Vizality will use that received value to send a message, either as a Bot Message or as real user message. Here it is a table of all possible values:
+You've probably noticed that there is a return value. Vizality will use that received value to send a message, either as a Bot Message or as real user message. Here it is a list of all values:
 
-|  Name  |                       Description                        |      Expected value       | Default value |
-| :----: | :------------------------------------------------------: | :-----------------------: | :-----------: |
-| send?  | If it should send as a Bot Message or as an user message |          Boolean          |     false     |
-| result |                   The message content                    | String \| [Embed](#Embed) |               |
+* `send` Boolean (optional) - If it should send as a Bot Message or as an user message. Default is `false`
+* `result` String \| [Embed](#Embed) - The message content
 
 ###### Embed
 

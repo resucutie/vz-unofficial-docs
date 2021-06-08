@@ -7,11 +7,7 @@ Updatable class used for handling Vizality updates and addon updates
 ## Importing
 
 ```js
-// ES6
 import { Updatable } from "@vizality/entities"
-
-// CJS
-const { Updatable } = require("@vizality/entities")
 ```
 
 
@@ -28,7 +24,7 @@ Returns a boolean
 this.isUpdatable()
 ```
 
-#### (async) `getGitRepo()`
+#### `async getGitRepo()`
 
 Returns the Git repo
 

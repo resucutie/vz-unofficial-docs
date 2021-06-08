@@ -7,11 +7,7 @@ Entity for Plugins.
 ## Importing
 
 ```js
-// ES6
 import { Plugin } from "@vizality/entities"
-
-// CJS
-const { Plugin } = require("@vizality/entities")
 ```
 
 

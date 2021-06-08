@@ -1,0 +1,12 @@
+{
+    "exclude": [
+        "node_modules"
+    ],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "module": "es6",
+        "paths": {
+            "downloader": [ "./downloader" ]
+        }
+    }
+}

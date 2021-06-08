@@ -77,7 +77,7 @@ color.getRandomColor() // "#a04222"
 
 Applies a hue rotation on the color. The rotation can go from 0º to 360º. Here it is a demonstration:
 
-![Hue circle](../../assets/color_wheel_hsl.png)
+![Hue circle](https://www.quackit.com/pix/stock/color_wheel_hsl.png)
 
 ```js
 color.rotateHue("#752bba", 180) // "#70ba2b"
